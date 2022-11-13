@@ -1,0 +1,80 @@
+.my-form {
+    margin-top: 24px;
+  }
+  
+  .fieldset {
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+    margin-block: 40px;
+    box-shadow: 1px 1px 3px #000000;
+  }
+  
+  .fieldset.mailFieldset {
+    margin-bottom: 20px;
+  }
+  
+  .my-form .icon {
+    fill: #212121;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .my-form label {
+    position: absolute;
+    top: -24px;
+    font-size: 20px;
+  }
+  
+  .my-form input {
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+  }
+  
+  .my-form input::placeholder {
+    color: rgba(0 0 0 / 0.5);
+  }
+  
+  .my-form input:focus {
+    outline: 0;
+  }
+  
+  .my-form:has(input:focus) {
+    border-color: blue;
+  }
+  
+  .fieldset:has(input:focus) .user-icon {
+    fill: blue;
+  }
+  
+  .fieldset:has(input:invalid) .user-icon {
+    fill: red;
+  }
+  
+  .fieldset:has(input:invalid) {
+    border-color: red;
+  }
+  
+  .my-form .legal-checkbox {
+    position: static;
+  }
+  
+  .legal-checkbox input {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .conditionalFieldset {
+    margin-top: 0;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  .my-form:has(.legal-checkbox input:checked) .conditionalFieldset {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
